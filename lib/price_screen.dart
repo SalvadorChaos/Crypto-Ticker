@@ -81,9 +81,6 @@ class _PriceScreenState extends State<PriceScreen> {
       var data = await CoinData().getCoinData(selectedCurrency);
       isWaiting = false;
       setState(() {
-        //OLD CODE
-        //value = data.toStringAsFixed(0);
-        //print(value);
         coinValues = data;
       });
     } catch (e) {
@@ -183,32 +180,3 @@ class CryptoCard extends StatelessWidget {
     );
   }
 }
-
-//OLD CODE
-//
-//Column(
-//crossAxisAlignment: CrossAxisAlignment.stretch,
-//children: <Widget>[
-//CryptoCard(
-//cryptoCurrency: 'BTC',
-//value: isWaiting ? '?' : value,
-//selectedCurrency: selectedCurrency,
-//),
-//CryptoCard(
-//cryptoCurrency: 'ETH',
-//value: isWaiting ? '?' : value,
-//selectedCurrency: selectedCurrency,
-//),
-//CryptoCard(
-//cryptoCurrency: 'LTC',
-//value: isWaiting ? '?' : value,
-//selectedCurrency: selectedCurrency,
-//),
-//CryptoCard(
-//cryptoCurrency: 'MSC',
-//value: isWaiting ? '?' : value,
-//selectedCurrency: selectedCurrency,
-//),
-//],
-//)
-//
